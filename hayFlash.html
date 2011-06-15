@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<title>$.hayFlash - Utilidad de jQuery</title>
+	</head>
+	<body>
+	
+		<h1>$.hayFlash - Utilidad de jQuery</h1>
+		<p>Llamando a $.hayFlash() podemos saber si Flash Player esta instalado en nuestro navegador</p>
+		<p>Con el método $.hayFlash("getVersion") podemos saber la versión del Flash Player</p>
+		
+		<h2 id="hayFlashResult"></h2>
+	
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.hayFlash.js"></script>
+		<script>
+		$(function() {
+			var $hayFlashResult = $("#hayFlashResult");
+			
+			// si hay flash muestro la version
+			if($.hayFlash()) {
+				$hayFlashResult.text("Tu navegador tiene el Flash Player " + $.hayFlash("getVersion"));
+			}
+			// si no hay flash muestro otro mensaje
+			else {
+				$hayFlashResult.text("Tu navegador no tiene Flash Player");
+			}
+
+		});
+		</script>
+	</body>
+</html>
