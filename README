@@ -1,4 +1,6 @@
 hayFlash - jQuery Utility
 -------------------------
 * Cross-browser (IE6+, FF, Chrome, Safari, Opera)
-* Lightweight (739 bytes minified)
+* Lightweight (minified):
+  - jQuery version: 739 bytes
+  - JavaScript version: 558 bytes
