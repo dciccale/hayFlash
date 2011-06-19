@@ -1,3 +1,11 @@
+/* jQuery hayFlash
+* ----------------------------------------------------------
+* Author: Denis Ciccale (dciccale@gmail.com)
+*
+* Dual licensed under the MIT and GPL licenses:
+* http://www.opensource.org/licenses/mit-license.php
+* http://www.gnu.org/licenses/gpl.html
+*/ 
 var $hayFlash = (function() {
 	var hayFlash = false, version;
 			
@@ -51,7 +59,7 @@ var $hayFlash = (function() {
 			}
 			// si no existe el metodo introducido devolvemos un error
 			else {
-				return 'El método ' +  metodo + ' no existe';
+				return 'El mï¿½todo ' +  metodo + ' no existe';
 			}
 			
 		};
