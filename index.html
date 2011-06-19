@@ -1,14 +1,14 @@
 <!doctype html>
 <html>
 	<head>
-		<title>$.hayFlash - Utilidad de jQuery</title>
+		<title>$.hayFlash - jQuery Utility</title>
 	</head>
 	<body>
 		<a href="http://github.com/dciccale/hayFlash"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
 		
-		<h1>$.hayFlash - Utilidad de jQuery</h1>
-		<p>Llamando a $.hayFlash() podemos saber si Flash Player esta instalado en nuestro navegador</p>
-		<p>Con el método $.hayFlash("getVersion") podemos saber la versión del Flash Player</p>
+		<h1>$.hayFlash - jQuery Utility</h1>
+		<p>Calling $.hayFlash() we can check if Flash Player is installed in the browser</p>
+		<p>If installed, using the method $.hayFlash("getVersion") we can se the version of Flash Player</p>
 		
 		<h2 id="hayFlashResult"></h2>
 	
@@ -18,13 +18,13 @@
 		$(function() {
 			var $hayFlashResult = $("#hayFlashResult");
 			
-			// si hay flash muestro la version
+			// if flash player installed, show version
 			if($.hayFlash()) {
-				$hayFlashResult.text("Tu navegador tiene el Flash Player " + $.hayFlash("getVersion"));
+				$hayFlashResult.text("Your browser has Flash Player " + $.hayFlash("getVersion"));
 			}
-			// si no hay flash muestro otro mensaje
+			// if flash player is not installed show message
 			else {
-				$hayFlashResult.text("Tu navegador no tiene Flash Player");
+				$hayFlashResult.text("Your browser doesn't have Flash Player installed");
 			}
 
 		});
