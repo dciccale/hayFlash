@@ -1,28 +1,25 @@
 <!doctype html>
-<html>
-	<head>
-		<title>$hayFlash funcion de JavaScript</title>
-	</head>
-	<body>
-	
-		<h1>$hayFlash funcion de JavaScript</h1>
-		<p>Llamando a $hayFlash() podemos saber si Flash Player esta instalado en nuestro navegador</p>
-		<p>Con el método $hayFlash("getVerstion") podemos saber la versión del Flash Player</p>
-		
-		<h2 id="hayFlashResult"></h2>
-	
-		<script src="js/hayFlash.js"></script>
-		<script>
-			var $hayFlashResult = document.getElementById("hayFlashResult");
-			
-			// si hay flash muestro la version
-			if($hayFlash()) {
-				$hayFlashResult.innerHTML = "Tu navegador tiene el Flash Player " + $hayFlash("getVersion");
-			}
-			// si no hay flash muestro otro mensaje
-			else {
-				$hayFlashResult.innerHTML = "Tu navegador no tiene Flash Player";
-			}
-		</script>
-	</body>
-</html>
+<title>hayFlash JavaScript know if Flash Player is installed on your browser</title>
+
+<h1>hayFlash, JavaScript version <iframe width="112px" scrolling="0" height="20px" frameborder="0" allowtransparency="true" src="http://markdotto.github.com/github-buttons/github-btn.html?user=dciccale&amp;repo=hayFlash&amp;type=watch&amp;count=true" class="github-btn"></iframe></h1>
+<p><a href="hayFlash.html">jQuery version</a></p>
+<p>Call window.hayFlash to know if your browser has Flash Player installed and it's version</p>
+<p><strong>Browser support:</strong> IE6+, Firefox, Opera, Safari, Chrome</p>
+
+<h2 id="hayFlashResult"></h2>
+
+<script src="js/hayFlash.js"></script>
+<script>
+(function () {
+	var $hayFlashResult = document.getElementById("hayFlashResult");
+
+	// si hay flash muestro la version
+	if(window.hayFlash) {
+		$hayFlashResult.innerHTML = "Your browser has Flash Player <em>" + hayFlash + "</em>";
+	}
+	// si no hay flash muestro otro mensaje
+	else {
+		$hayFlashResult.innerHTML = "Your browser doesn't have Flash Player";
+	}
+}());
+</script>
