@@ -3,34 +3,35 @@
 Know if Flash Player is installed on your browser and it's version.
 
 **Browser support:** IE6+, Firefox, Opera, Safari, Chrome
+
 **Lightweight** (minified and gzipped):
   - JavaScript version: 187 bytes
   - jQuery Utility: 193 bytes
 
-[**Live Demo**](http://dciccale.github.com/hayFlash)
+### [**Live Demo**](http://dciccale.github.com/hayFlash)
 
 ## Usage
 hayFlash comes in two versions, pure JavaScript and as a jQuery Utility.
 
 ### JavaScript version
-´´´javascript
+```javascript
 if (window.hayFlash) {
   // do something with flash
   console.log('Flash player version:', window.hayFlash);
 } else {
   // show an image or whatever
 }
-´´´
+```
 
 ### jQuery Utility
-´´´javascript
+```javascript
 if ($.hayFlash) {
   // do something with flash
   console.log('Flash player version:', $.hayFlash);
 } else {
   // show an image or whatever
 }
-´´´
+```
 
 ## License
 
