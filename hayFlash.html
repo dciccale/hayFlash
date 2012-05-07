@@ -1,0 +1,28 @@
+<!doctype html>
+<title>$.hayFlash jQuery Utility to know if Flash Player is installed on your browser</title>
+<script>var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-24098807-4"]);_gaq.push(["_trackPageview"]);(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script>
+
+<a href="http://github.com/dciccale/hayFlash"><img style="position:absolute;top:0;right:0;border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+
+<h1>$.hayFlash jQuery Utility <iframe width="112px" scrolling="0" height="20px" frameborder="0" allowtransparency="true" src="http://markdotto.github.com/github-buttons/github-btn.html?user=dciccale&amp;repo=hayFlash&amp;type=watch&amp;count=true" class="github-btn"></iframe></h1>
+<p><a href="hayFlash-javascript.html">pure JavaScript version</a></p>
+<p>Call $.hayFlash to know if your browser has Flash Player installed and it's version</p>
+<p><strong>Browser support:</strong> IE6+, Firefox, Opera, Safari, Chrome</p>
+
+<h2 id="hayFlashResult"></h2>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="js/jquery.hayFlash.js"></script>
+<script>
+$(function() {
+	var $hayFlashResult = $("#hayFlashResult");
+
+	if($.hayFlash) {
+		$hayFlashResult.html("Your browser has Flash Player <em>" + $.hayFlash + "</em>");
+	}
+	else {
+		$hayFlashResult.text("Your browser doesn't have Flash Player");
+	}
+
+});
+</script>
