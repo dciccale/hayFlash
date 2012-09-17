@@ -7,7 +7,7 @@
  *
  * if (window.hayFlash) {
  *   // show flash thing
- *   console.log('flash version is:', hayFlash);
+ *   alert('flash version is ' + hayFlash);
  * } else {
  *   // show an image?
  * }
@@ -18,7 +18,7 @@ window.hayFlash = function(a, b) {
     b = new ActiveXObject(a+b+'.'+a+b).GetVariable('$version')
   } catch (e) {
     b = navigator.plugins[a+' '+b];
-    b = b ? b.description : "";
+    b = b ? b.description : '';
   }
 
   return b.match(/\d+/)[0];
