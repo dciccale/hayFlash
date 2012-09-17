@@ -15,12 +15,11 @@
  */
 (function($) {
   $.hayFlash = function(a, b) {
-
     try {
       b = new ActiveXObject(a+b+'.'+a+b).GetVariable('$version')
     } catch (e) {
       b = navigator.plugins[a+' '+b];
-      b = b ? b.description : "";
+      b = b ? b.description : '';
     }
 
     return b.match(/\d+/)[0];
