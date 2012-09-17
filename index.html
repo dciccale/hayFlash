@@ -14,13 +14,15 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="js/jquery.hayFlash.js"></script>
 <script>
-$(function() {
+$(function () {
 	var $hayFlashResult = $("#hayFlashResult");
 
-	if($.hayFlash) {
+  // show flash version
+	if ($.hayFlash) {
 		$hayFlashResult.html("Your browser has Flash Player <em>" + $.hayFlash + "</em>");
-	}
-	else {
+
+  // no flash
+	} else {
 		$hayFlashResult.text("Your browser doesn't have Flash Player");
 	}
 

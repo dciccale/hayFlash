@@ -14,15 +14,15 @@
 <script src="js/hayFlash.js"></script>
 <script>
 (function () {
-	var $hayFlashResult = document.getElementById("hayFlashResult");
+	var hayFlashResult = document.getElementById("hayFlashResult");
 
-	// si hay flash muestro la version
-	if(window.hayFlash) {
-		$hayFlashResult.innerHTML = "Your browser has Flash Player <em>" + window.hayFlash + "</em>";
-	}
-	// si no hay flash muestro otro mensaje
-	else {
-		$hayFlashResult.innerHTML = "Your browser doesn't have Flash Player";
+	// show flash version
+	if (window.hayFlash) {
+		hayFlashResult.innerHTML = "Your browser has Flash Player <em>" + window.hayFlash + "</em>";
+
+	// no flash
+  } else {
+		hayFlashResult.innerHTML = "Your browser doesn't have Flash Player";
 	}
 }());
 </script>
